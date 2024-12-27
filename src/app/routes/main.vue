@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import PHome from '@/pages/home'
+import PMain from '@/pages/main'
+
 </script>
 
 <template>
-    <PHome />
+    <PMain/>
 </template>

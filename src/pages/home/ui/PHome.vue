@@ -1,5 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { VExample } from '@/entities/example'
+</script>
 
 <template>
-    <h1>Home</h1>
+    <VExample />
 </template>

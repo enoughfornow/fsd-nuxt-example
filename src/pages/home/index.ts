@@ -1,1 +1,3 @@
-export { default as PHome } from './ui/PHome.vue';
+import PHome from './ui/PHome.vue';
+
+export default PHome
