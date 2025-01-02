@@ -2,13 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
+  srcDir: 'src/',
   alias: {
     '@': '../src'
   },
   dir: {
-    pages: './src/app/routes',
-    layouts: './src/app/layouts'
-  }
+    layouts: './app/layouts'
+  },   
 })
 // Для использования компонента <NuxtPage/> без корневого файла app.vue в вашей кастомной структуре проекта,
 //  вы можете следовать следующему подходу:
