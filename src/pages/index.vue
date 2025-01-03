@@ -3,5 +3,5 @@ import { VExample } from '@/entities/example'
 </script>
 
 <template>
-    <VExample />
+  <VExample />
 </template>

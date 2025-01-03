@@ -1,5 +1,5 @@
-import VExample from "./ui/VExample.vue";
-import * as api from "./api";
-import * as types from "./types";
+import * as api from './api'
+import * as types from './types'
+import VExample from './ui/VExample.vue'
 
-export { VExample, api, types };
+export { api, types, VExample }

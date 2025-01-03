@@ -1,4 +1,6 @@
 <template>
+  <main>
     <div>Home Layout</div>
-    <slot/>
+    <slot />
+  </main>
 </template>
