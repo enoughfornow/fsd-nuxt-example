@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { UIButton } from '@/shared/ui'
 
+// стилизация в данном слое может касаться позиционирования, указания размеров или мнипуляций с текстом
 const classes = {
   text: 'text-red',
 }

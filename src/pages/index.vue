@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { VExample } from '@/entities/example'
+import WExample from '@/widgets/example'
 </script>
 
 <template>
-  <VExample />
+  <WExample />
 </template>
