@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import '@unocss/reset/sanitize/sanitize.css'
-import '@unocss/reset/sanitize/assets.css'
-import '@unocss/reset/normalize.css'
+
 </script>
 
 <template>
@@ -11,5 +9,7 @@ import '@unocss/reset/normalize.css'
 </template>
 
 <style>
-
+* {
+  width: 100%;
+}
 </style>
