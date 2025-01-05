@@ -5,7 +5,11 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   // errorPage: 'src/error.vue', вроде можно явно указать путь к этому компоненту
   alias: {
-    '@': '../src',
+    '@': '~/shared',
+    'app': '~/app',
+    'entities': '~/entities',
+    'widgets': '~/widgets',
+    'features': '~/features',
   },
   dir: {
     layouts: './app/layouts',
