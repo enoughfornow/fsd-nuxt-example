@@ -1,3 +1,3 @@
-import WExample from './ui/WExample.vue'
+import WExample from './ui/WExample.vue';
 
-export default WExample
+export default WExample;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PHome from '@/pages/home'
+import PHome from '@/pages/home';
 
 // если мы хотим чтобы роут динамически менялся, то нам надо использовать app.vue в корне проекта
 // и роутинг будет ссылаться на папку pages

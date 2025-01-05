@@ -1,3 +1,3 @@
-import UIButton from './button/UIButton.vue'
+import UIButton from './button/UIButton.vue';
 
-export { UIButton }
+export { UIButton };

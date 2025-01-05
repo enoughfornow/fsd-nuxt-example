@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import WExample from 'widgets/example'
+import WExample from 'widgets/example';
 
 // если мы хотим делать кастомные лайауты с именными слотами,
 // то нам придется убрать <NuxtLayout/> из корневого компонента app.vue

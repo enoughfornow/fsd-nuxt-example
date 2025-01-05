@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { UIButton } from '@/ui'
+import { UIButton } from '@/ui';
 
 // стилизация в данном слое может касаться позиционирования, указания размеров или мнипуляций с текстом
 const classes = {
   text: 'text-red',
-}
+};
 </script>
 
 <template>
