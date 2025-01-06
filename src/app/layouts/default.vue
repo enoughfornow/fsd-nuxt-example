@@ -1,10 +1,18 @@
 <script setup lang="ts">
-// этот лайут будет использоваться по умолчанию
+import { UILayout } from '@/ui';
 </script>
 
 <template>
-  <main>
-    <div>Default Layout</div>
-    <slot name="content" />
-  </main>
+  <UILayout>
+    <template #header>
+      <h1>Default Layout header</h1>
+      <slot name="default-header" />
+    </template>
+    <h1>Default Layout main</h1>
+    <slot name="default-main" />
+    <template #footer>
+      <h1>Default Layout footer</h1>
+      <slot name="default-footer" />
+    </template>
+  </UILayout>
 </template>

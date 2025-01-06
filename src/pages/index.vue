@@ -7,5 +7,9 @@ import WExample from 'widgets/example';
 </script>
 
 <template>
-  <WExample />
+  <NuxtLayout>
+    <template #default-main>
+      <WExample />
+    </template>
+  </NuxtLayout>
 </template>

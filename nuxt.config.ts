@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   },
   dir: {
     layouts: './app/layouts',
+    pages: './pages',
   },
   modules: [
     '@nuxt/eslint',

@@ -5,7 +5,5 @@ import { VExample } from 'entities/example';
 </script>
 
 <template>
-  <div>
-    <VExample />
-  </div>
+  <VExample />
 </template>

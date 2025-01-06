@@ -1,75 +1,24 @@
-# Nuxt Minimal Starter
+# UnoCSS: Атомарный CSS-движок
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+UnoCSS - это атомарный CSS-движок, который оптимизирует использование классов в проекте. Рассмотрим ключевые аспекты:
 
-## Setup
+1. Атомарные классы
 
-Make sure to install dependencies:
+UnoCSS создает атомарные (единичные) классы CSS, которые можно переиспользовать во всем проекте.
+Это значительно уменьшает размер итогового CSS-файла.
 
-```bash
-# npm
-npm install
+2. Отсутствие конфликтов
 
-# pnpm
-pnpm install
+Благодаря атомарному подходу, классы UnoCSS не конфликтуют друг с другом.
+Каждый класс отвечает за одно конкретное свойство CSS.
 
-# yarn
-yarn install
+3. Специфичность
 
-# bun
-bun install
-```
+UnoCSS не нарушает специфичность CSS.
+Все атомарные классы имеют одинаковую специфичность,
+что упрощает их использование и предсказуемость.
 
-## Development Server
+4. Оптимизация
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+UnoCSS автоматически генерирует только те классы, которые фактически используются в вашем проекте,
+что помогает оптимизировать размер итогового CSS.
