@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     'widgets': '~/widgets',
     'features': '~/features',
   },
+  imports: {
+    dirs: ['./shared/composables'],
+  },
   dir: {
     layouts: './app/layouts',
     pages: './pages',
