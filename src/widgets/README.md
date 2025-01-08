@@ -9,3 +9,20 @@
 Виджет может использовать модели (src/entities) и фичи(src/features)
 
 У компонентов-виджетов префикс `W`, например `WPage`
+
+Отличие от **features**
+
+Получение данных при рендере (initial data fetching)
+
+Для виджетов, которые нуждаются в данных при начальном рендеринге, можно использовать `useFetch` или `useAsyncData`. Эти composables обеспечивают получение данных на стороне сервера (если включен SSR) и предотвращают повторную загрузку данных на клиенте.
+
+```html
+<script setup lang='ts'>
+    const { data: widgetData } = await useFetch('/api/widget-data')
+</script>
+
+<template>
+  <div>
+    <!-- Отображение widgetData -->
+  </div>
+</template>
