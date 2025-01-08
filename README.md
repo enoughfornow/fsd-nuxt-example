@@ -50,3 +50,66 @@ UnoCSS не нарушает специфичность CSS.
 
 UnoCSS автоматически генерирует только те классы, которые фактически используются в вашем проекте,
 что помогает оптимизировать размер итогового CSS.
+
+# Структура компонента Vue с Composition API
+
+**Для обеспечения согласованности и читаемости кода, следуйте этой структуре при создании компонентов Vue с использованием Composition API:**
+
+1. Типизация пропсов и эмитов
+2. Определение пропсов и эмитов
+3. Стилизация (если используются объекты классов)
+4. Реактивные переменные
+5. Вычисляемые свойства
+6. Методы
+7. Хуки жизненного цикла
+8. Отслеживание изменений (watch)
+
+```html
+<script setup lang="ts">
+// типизация пропсов
+interface IProps {
+  prop: unknown
+}
+// типизация эмитов(событий)
+interface IEmits {
+  (e: 'event', payload: unknown): void
+}
+
+const props = defineProps<IProps>();
+const emit = defineEmits<IEmits>();
+
+// стилизация
+const classes = {
+  root: 'flex flex-col',
+};
+
+// реактивная переменная
+const reactiveVariale = ref(null);
+
+// импользуем если необходимо кешировать значение или не потерять реактивность
+const computedVariable = computed(() => reactiveVariale.value);
+
+// метод
+function onClick() {
+  console.log('click');
+}
+// если нужно выполнить какое то действие при монтировании на клиенте
+onMounted(() => {
+  console.log('mounted');
+});
+// отслеживание изменений на основании reactiveVariale
+watch(reactiveVariale, () => {
+  console.log('watch');
+});
+</script>
+
+<template>
+  <div :class="classes.root">
+    <h1 @click="emit('event', reactiveVariale)">
+      Example Feature
+    </h1>
+    <button @click="onClick">
+      Click
+    </button>
+  </div>
+</template>
