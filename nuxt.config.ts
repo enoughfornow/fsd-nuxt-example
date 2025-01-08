@@ -18,10 +18,7 @@ export default defineNuxtConfig({
     layouts: './app/layouts',
     pages: './pages',
   },
-  modules: [
-    '@nuxt/eslint',
-    '@unocss/nuxt',
-  ],
+  modules: ['@nuxt/eslint', '@unocss/nuxt', '@pinia/nuxt'],
   eslint: {
     config: {
       standalone: false,
