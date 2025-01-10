@@ -1,11 +1,11 @@
-// export default function useRequest() {
-//   const { $apiClient } = useNuxtApp();
+export default function useRequest() {
+  const { $apiClient } = useNuxtApp();
 
-//   return {
-//     get: $apiClient.get,
-//     post: $apiClient.post,
-//     put: $apiClient.put,
-//     patch: $apiClient.patch,
-//     del: $apiClient.delete,
-//   };
-// }
+  return {
+    get: $apiClient.get,
+    post: $apiClient.post,
+    put: $apiClient.put,
+    patch: $apiClient.patch,
+    del: $apiClient.delete,
+  };
+}
