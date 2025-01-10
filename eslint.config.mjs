@@ -10,7 +10,7 @@ export default withNuxt(
       quotes: 'single', // or 'double'
     },
     rules: {
-      'object-curly-newline': ['error', {
+      'style/object-curly-newline': ['error', {
         ObjectExpression: 'always',
         ObjectPattern: {
           multiline: true,
