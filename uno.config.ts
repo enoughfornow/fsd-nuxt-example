@@ -1,8 +1,4 @@
-import {
-  defineConfig,
-  presetUno,
-  presetWind,
-} from 'unocss';
+import { defineConfig, presetUno, presetWind } from 'unocss';
 
 export default defineConfig({
   // ваши настройки UnoCSS
@@ -14,7 +10,11 @@ export default defineConfig({
   ],
   rules: [
     // https://unocss.dev/config/rules
-    ['w-min-content', { width: 'min-content' }],
-    ['w-max-content', { width: 'max-content' }],
+    ['w-min-content', {
+      width: 'min-content',
+    }],
+    ['w-max-content', {
+      width: 'max-content',
+    }],
   ],
 });

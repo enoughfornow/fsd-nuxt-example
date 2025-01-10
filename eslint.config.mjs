@@ -10,8 +10,22 @@ export default withNuxt(
       quotes: 'single', // or 'double'
     },
     rules: {
+      'object-curly-newline': ['error', {
+        ObjectExpression: 'always',
+        ObjectPattern: {
+          multiline: true,
+        },
+        ImportDeclaration: 'never',
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 3,
+        },
+      }],
       'style/semi': ['error', 'always'],
-      'style/indent': ['error', 2, { ArrayExpression: 1, ObjectExpression: 1 }],
+      'style/indent': ['error', 2, {
+        ArrayExpression: 1,
+        ObjectExpression: 1,
+      }],
       'vue/max-attributes-per-line': [
         'error',
         {
