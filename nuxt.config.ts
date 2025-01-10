@@ -14,8 +14,11 @@ export default defineNuxtConfig({
     'features': '~/features',
   },
   imports: {
-    dirs: ['./shared/composables'],
+    dirs: ['./shared/composables/**'],
   },
+  plugins: [
+    '~/shared/api/index.client.ts',
+  ],
   dir: {
     layouts: './app/layouts',
     pages: './pages',

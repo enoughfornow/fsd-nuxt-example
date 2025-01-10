@@ -1,4 +1,4 @@
-import * as api from './api';
+import api from './api';
 import * as types from './types';
 import VExample from './ui/VExample.vue';
 
