@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   dir: {
     layouts: './app/layouts',
     pages: './pages',
+    middleware: './shared/middleware',
   },
   modules: ['@nuxt/eslint', '@unocss/nuxt', '@pinia/nuxt'],
   eslint: {

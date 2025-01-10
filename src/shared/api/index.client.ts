@@ -41,6 +41,8 @@ export default defineNuxtPlugin(() => {
   };
 });
 
+// middleware/auth.ts
+
 // export default defineNuxtPlugin(() => {
 //   const config = useRuntimeConfig();
 //   const accessToken = useCookie('accessToken');
