@@ -26,7 +26,7 @@ _* — эти слои,  **App**  и  **Shared**, в отличие от дру�
 |entities|`shared`|`features`, `widgets`, `pages`, `app`|
 |shared|`-`| `entities`, `features`, `widgets`, `pages`, `app`|
 
-# FE Vue Framework
+# FE Vue SSR Framework
 
 [**Nuxt**](https://nuxt.com)
 
@@ -55,9 +55,24 @@ UnoCSS не нарушает специфичность CSS.
 UnoCSS автоматически генерирует только те классы, которые фактически используются в проекте,
 что помогает оптимизировать размер итогового CSS.
 
-# State Management
+**Стилизация в компоненте Vue**
 
-[**Pinia**](https://pinia.vuejs.org/core-concepts/)
+Таким образом мы избегаем длинных записей классов, разделяя их на группы
+
+```js
+const classes = {
+  root: [
+    'flex flex-col', // display
+    'justify-center items-center', // position
+    'border-solid border-black rounded', // border
+    'w-max-content', // width
+    'p-4 m-0 m-auto', // padding/margin
+  ],
+  text: 'text-red text-center',
+  buttonsContainer: 'flex gap-2 w-full justify-center', // в данном месте классы читаемы, не обязательно разделять
+  button: 'w-max-content',
+};
+```
 
 # Структура компонента Vue с Composition API
 
@@ -121,3 +136,45 @@ watch(reactiveVariale, () => {
     </button>
   </div>
 </template>
+```
+# State Management
+
+[**Pinia**](https://pinia.vuejs.org/core-concepts/)
+
+**Структура стора Pinia в стиле Composition API**
+```js
+export const useCounterStore = defineStore('counter', () => {
+  // state
+  const count = ref(0);
+  const name = ref('Eduardo');
+
+  // getters
+  const doubleCount = computed(() => count.value * 2);
+
+  // actions
+  function increment() {
+    count.value++;
+  }
+  // async actions
+  async function asyncIncrement() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    count.value++;
+  }
+
+  return {
+    count,
+    name,
+    doubleCount,
+    increment,
+    asyncIncrement,
+  };
+});
+```
+
+# OpenAPI TS
+
+Необходимо чтобы бекенд генерировал документацию для API через [**Swagger**](https://swagger.io)
+
+[**OpenAPI-fetch**](https://openapi-ts.dev/openapi-fetch/) - это легковесный и типобезопасный клиент для работы с API, который использует вашу схему OpenAPI для автоматической генерации типов и обеспечения правильности запросов. Он идеально подходит для использования в проектах на React, Vue, Svelte и обычном JavaScript, и не влияет на производительность приложения.
+
+**Пример реализации будет позже**
