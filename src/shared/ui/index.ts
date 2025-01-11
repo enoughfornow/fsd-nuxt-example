@@ -1,4 +1,10 @@
-import UIButton from './button/UIButton.vue';
-import UILayout from './layout/UILayout.vue';
+import UIButton from './button';
+import UIIcon, { types as UIIconTypes } from './icon';
+import UILayout from './layout';
 
-export { UIButton, UILayout };
+export {
+  UIButton,
+  UIIcon,
+  UIIconTypes,
+  UILayout,
+};
