@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { UIButton } from '@/ui';
 
+interface IEmits {
+  (e: 'event'): void
+}
+
+const emit = defineEmits<IEmits>();
+
 // стилизация в данном слое может касаться позиционирования, указания размеров или мнипуляций с текстом
 const classes = {
   // таким образом мы избегаем длинных записей классов, разделяя их на группы
@@ -26,6 +32,7 @@ const classes = {
       <UIButton
         variant="primary"
         :class="classes.button"
+        @click="emit('event')"
       >
         primary
       </UIButton>

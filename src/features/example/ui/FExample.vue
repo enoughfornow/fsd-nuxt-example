@@ -1,14 +1,11 @@
 <script setup lang="ts">
+import { VExample } from 'entities/example';
 
+function onClickGetLog() {
+  console.log('click');
+}
 </script>
 
 <template>
-  <div>
-    <h1>
-      Example Feature
-    </h1>
-    <button>
-      Click
-    </button>
-  </div>
+  <VExample @event="onClickGetLog" />
 </template>
