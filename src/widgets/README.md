@@ -16,13 +16,27 @@
 
 Для виджетов, которые нуждаются в данных при начальном рендеринге, можно использовать `useFetch` или `useAsyncData`. Эти composables обеспечивают получение данных на стороне сервера (если включен SSR) и предотвращают повторную загрузку данных на клиенте.
 
+Если необходимо на основании полученных при рендере данных делать другие запросы, то можно передать item пропсами в `feature` компонент.
+
 ```html
 <script setup lang='ts'>
-    const { data: widgetData } = await useFetch('/api/widget-data')
+  import { api } from 'entities/example'
+  import { FExample, useExampleStore } from 'features/example'
+
+    const store = useExampleStore()
+    await store.getExampleList()
+
+    const storeData = computed(() => store.data) // если используем store
+    const { data } = await useFetch(() => api.getExampleList()) // если нет необходимости использовать store
+
 </script>
 
 <template>
-  <div>
-    <!-- Отображение widgetData -->
+  <div
+  v-for="item in data"
+  :key="item.id"
+  >
+    <FExample :data="item"/>
   </div>
 </template>
+```

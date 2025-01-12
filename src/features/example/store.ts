@@ -1,7 +1,7 @@
 import type { types } from 'entities/example';
 import { api } from 'entities/example';
 
-export const useCounterStore = defineStore('counter', () => {
+export const useExampleStore = defineStore('example', () => {
   // state
   const count = ref(0);
   const name = ref('Eduardo');
